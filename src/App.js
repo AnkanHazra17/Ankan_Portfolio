@@ -13,7 +13,7 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-primary relative">
+      <div className="bg-primary relative overflow-y-hidden">
         <div className="bg-hero-pattern bg-no-repeat bg-center">
           <Navbar></Navbar>
           <Hero></Hero>

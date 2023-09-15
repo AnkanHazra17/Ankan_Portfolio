@@ -25,9 +25,9 @@ const Contact = () => {
       "service_iet6aif",
       "template_e2vtxfp",
       {
-        form_name:form.name,
+        from_name:form.name,
         to_name:"Ankan",
-        form_email:form.email,
+        from_email:form.email,
         to_email:"ankan.hazra1710@gmail.com",
         message:form.message
       },

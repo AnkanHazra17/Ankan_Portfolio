@@ -4,6 +4,7 @@ import SectionWraper from '../hoc/SectionWraper'
 import { textVariant } from '../utils/Motion'
 import { technologies } from '../contents/Content'
 import BallCanvas from './canvas/Balls'
+import { css, docker, figma, git, html, javascript, mongodb, nodejs, reactjs, redux, tailwind, threejs, typescript } from '../assets'
 
 
 
@@ -16,7 +17,7 @@ const Tech = () => {
           <h2 className='text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>My Techstack.</h2>
         </motion.div>
 
-        <div className='flex gap-10 flex-wrap justify-center mt-4'>
+        <div className='md:flex gap-10 flex-wrap justify-center mt-4 hidden'>
           {
             technologies.map((technology) =>(
               <div className='w-28 h-28' key={technology.name}>
@@ -24,6 +25,22 @@ const Tech = () => {
               </div>
             ))
           }
+        </div>
+
+        <div className='flex md:hidden flex-wrap'>
+          <img src={html} alt=''></img>
+          <img src={css} alt=''></img>
+          <img src={javascript} alt=''></img>
+          <img src={typescript} alt=''></img>
+          <img src={reactjs} alt=''></img>
+          <img src={redux} alt=''></img>
+          <img src={tailwind} alt=''></img>
+          <img src={nodejs} alt=''></img>
+          <img src={mongodb} alt=''></img>
+          <img src={threejs} alt=''></img>
+          <img src={git} alt=''></img>
+          <img src={figma} alt=''></img>
+          <img src={docker} alt=''></img>
         </div>
       </div>
     </div>

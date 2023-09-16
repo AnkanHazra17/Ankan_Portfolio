@@ -14,7 +14,7 @@ const ServiceCard = ({service, index}) => {
                 scale:1,
                 speed:450
             }}
-            className='b bg-tertiary py-4 px-12 rounded-2xl min-h-[280px] flex flex-col items-center justify-evenly'
+            className='bg-tertiary py-4 px-12 rounded-2xl min-h-[280px] flex flex-col items-center justify-evenly'
             >
                 <img src={service.icon} alt='' className='w-16 h-16 object-contain'></img>
                 <p className='text-white text-[20px] font-bold text-center'>{service.title}</p>

@@ -16,7 +16,7 @@ const Tech = () => {
           <h2 className='text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>My Techstack.</h2>
         </motion.div>
 
-        <div className='flex gap-10 flex-wrap justify-center mt-4'>
+        <div className='flex gap-10 md:flex-nowrap flex-wrap justify-center mt-4'>
           {
             technologies.map((technology) =>(
               <div className='w-28 h-28' key={technology.name}>

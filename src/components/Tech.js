@@ -4,9 +4,6 @@ import SectionWraper from '../hoc/SectionWraper'
 import { textVariant } from '../utils/Motion'
 import { technologies } from '../contents/Content'
 import BallCanvas from './canvas/Balls'
-import { css, docker, figma, git, html, javascript, mongodb, nodejs, reactjs, redux, tailwind, threejs, typescript } from '../assets'
-
-
 
 const Tech = () => {
   return (
@@ -27,20 +24,14 @@ const Tech = () => {
           }
         </div>
 
-        <div className='flex md:hidden flex-wrap'>
-          <img src={html} alt=''></img>
-          <img src={css} alt=''></img>
-          <img src={javascript} alt=''></img>
-          <img src={typescript} alt=''></img>
-          <img src={reactjs} alt=''></img>
-          <img src={redux} alt=''></img>
-          <img src={tailwind} alt=''></img>
-          <img src={nodejs} alt=''></img>
-          <img src={mongodb} alt=''></img>
-          <img src={threejs} alt=''></img>
-          <img src={git} alt=''></img>
-          <img src={figma} alt=''></img>
-          <img src={docker} alt=''></img>
+        <div className='flex md:hidden flex-wrap gap-4 justify-center mt-4'>
+          {
+            technologies.map((technology) => (
+              <div className='w-16 h-16 rounded-full bg-slate-600 p-2 flex items-center justify-center' key={technology.name}>
+                <img src={technology.icon} alt=''></img>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>

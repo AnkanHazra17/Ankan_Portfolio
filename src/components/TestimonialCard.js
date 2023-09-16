@@ -17,7 +17,7 @@ const TestimonialCard = ({testimonial}) => {
             
             <div className='flex flex-col items-center gap-6 mt-6 mb-4'>
                 <FaQuoteLeft></FaQuoteLeft>
-                <p className='max-w-[500px]'>{testimonial.testimonial}</p>
+                <p className='max-w-[500px] text-sm'>{testimonial.testimonial}</p>
                 <FaQuoteRight></FaQuoteRight>
             </div>
         </div>

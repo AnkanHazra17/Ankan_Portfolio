@@ -11,6 +11,7 @@ import emailjs from "@emailjs/browser"
 const Contact = () => {
 
   const formRef = useRef();
+  const [loading, setLoading] = useState(false);
 
   const [form, setForm] = useState({
     name:"",
@@ -20,6 +21,7 @@ const Contact = () => {
 
   function submitHandler(event){
     event.preventDefault();
+    setLoading(true)
     
     emailjs.send(
       "service_iet6aif",
@@ -34,6 +36,7 @@ const Contact = () => {
       "9lXajF3wtkX6R7H9t"
     )
     .then(() =>{
+      setLoading(false)
       alert("Thank you. I will get back to you soon")
       setForm({
         name:"",
@@ -41,9 +44,11 @@ const Contact = () => {
         message:""
       })
     },(error) =>{
+      setLoading(false)
       console.log(error)
       alert("Somthing went wrong");
     } )
+
   }
 
   function changeHandler(event) {
@@ -90,7 +95,11 @@ const Contact = () => {
               ></textarea>
             </label>
 
-            <button className='text-tertiary bg-white py-3 px-8 w-fit rounded-md font-bold shadow-md shadow-primary hover:text-white hover:bg-tertiary transition-all duration-200'>Send</button>
+            <button className='text-tertiary bg-white py-3 px-8 w-fit rounded-md font-bold shadow-md shadow-primary hover:text-white hover:bg-tertiary transition-all duration-200'>
+              {
+                loading ? <p>Sending...</p> : <p>Send</p>
+              }
+            </button>
 
           </form>
         </motion.div>

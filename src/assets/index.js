@@ -1,4 +1,3 @@
-
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -26,9 +25,9 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import tripguide from "./tripguide.png";
-import razorpay from "./razorpay.png"
-import discord from "./discord.png"
+import studyNotion from "./studyNotion.png";
+import razorpay from "./razorpay.png";
+import discord from "./discord.png";
 
 export {
   backend,
@@ -55,7 +54,7 @@ export {
   shopify,
   starbucks,
   tesla,
-  tripguide,
+  studyNotion,
   razorpay,
   discord,
 };

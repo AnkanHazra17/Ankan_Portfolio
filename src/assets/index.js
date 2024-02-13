@@ -28,6 +28,7 @@ import tesla from "./company/tesla.png";
 import studyNotion from "./studyNotion.png";
 import razorpay from "./razorpay.png";
 import discord from "./discord.png";
+import figma_Clone from "./Figma_Clone.png";
 
 export {
   backend,
@@ -57,4 +58,5 @@ export {
   studyNotion,
   razorpay,
   discord,
+  figma_Clone,
 };

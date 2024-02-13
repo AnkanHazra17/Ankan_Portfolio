@@ -19,6 +19,7 @@ import {
   threejs,
   razorpay,
   discord,
+  figma_Clone,
 } from "../assets";
 
 export const navLinks = [
@@ -254,6 +255,28 @@ const projects = [
     image: studyNotion,
     source_code_link: "https://github.com/AnkanHazra17/StudyNotion",
     project_link: "https://study-notion-nu-ten.vercel.app/",
+  },
+  {
+    name: "Figma Clone",
+    description:
+      "Introducing the Figma Replica – a recreation of the fully functional figma platform.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "liveBlocks",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Shadcn",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: figma_Clone,
+    source_code_link: "https://github.com/AnkanHazra17/Figma_Clone_LiveBlocks",
+    project_link: "https://figma-pro-phi.vercel.app/",
   },
 ];
 

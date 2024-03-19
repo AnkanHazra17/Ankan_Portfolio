@@ -254,7 +254,7 @@ const projects = [
     ],
     image: studyNotion,
     source_code_link: "https://github.com/AnkanHazra17/StudyNotion",
-    project_link: "https://study-notion-nu-ten.vercel.app/",
+    project_link: "https://study-notion-e-learning.vercel.app/",
   },
   {
     name: "Figma Clone",

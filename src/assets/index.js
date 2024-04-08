@@ -29,6 +29,7 @@ import studyNotion from "./studyNotion.png";
 import razorpay from "./razorpay.png";
 import discord from "./discord.png";
 import figma_Clone from "./Figma_Clone.png";
+import yoomMeeting from "./yoomMeeting.png";
 
 export {
   backend,
@@ -59,4 +60,5 @@ export {
   razorpay,
   discord,
   figma_Clone,
+  yoomMeeting,
 };

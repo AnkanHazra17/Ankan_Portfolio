@@ -20,6 +20,7 @@ import {
   razorpay,
   discord,
   figma_Clone,
+  yoomMeeting,
 } from "../assets";
 
 export const navLinks = [
@@ -277,6 +278,28 @@ const projects = [
     image: figma_Clone,
     source_code_link: "https://github.com/AnkanHazra17/Figma_Clone_LiveBlocks",
     project_link: "https://figma-pro-phi.vercel.app/",
+  },
+  {
+    name: "Yoom Meeting",
+    description:
+      "This is Yoom Meeting, a fully functional video conferencing platform.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Stream.io",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Clerk",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: yoomMeeting,
+    source_code_link: "https://github.com/AnkanHazra17/zoom_clone",
+    project_link: "https://yoom-meeting.vercel.app/",
   },
 ];
 

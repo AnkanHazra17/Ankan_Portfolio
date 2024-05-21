@@ -3,10 +3,22 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../contents/Content";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import { MdLogin } from "react-icons/md";
+import LoginModal from "./modal/LoginModal";
+import { useDispatch, useSelector } from "react-redux";
+import { LuLogOut } from "react-icons/lu";
+import { LogOut } from "../services/operations/callAuthApi";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [loginModal, setLoginModal] = useState(false);
+  const { user } = useSelector((state) => state.profile);
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    dispatch(LogOut());
+  };
 
   return (
     <div className="w-full py-5 fixed top-0 z-20 flex items-center bg-primary">
@@ -39,6 +51,17 @@ const Navbar = () => {
                 <a href={`#${link.id}`}>{link.title}</a>
               </div>
             ))}
+            {user ? (
+              <LuLogOut
+                onClick={logoutHandler}
+                className="text-secondary hover:text-white transition-all duration-100 cursor-pointer text-lg"
+              ></LuLogOut>
+            ) : (
+              <MdLogin
+                onClick={() => setLoginModal(true)}
+                className="text-secondary hover:text-white transition-all duration-100 cursor-pointer text-lg"
+              ></MdLogin>
+            )}
           </div>
         </div>
 
@@ -71,10 +94,30 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </div>
               ))}
+
+              {user ? (
+                <p
+                  onClick={logoutHandler}
+                  className="flex items-center gap-2 text-secondary hover:text-white transition-all duration-100 cursor-pointer"
+                >
+                  <LuLogOut className="text-lg"></LuLogOut>
+                  Log out
+                </p>
+              ) : (
+                <p
+                  className="flex items-center gap-2 text-secondary hover:text-white transition-all duration-100 cursor-pointer"
+                  onClick={() => setLoginModal(true)}
+                >
+                  <MdLogin className="text-lg"></MdLogin>
+                  Log in
+                </p>
+              )}
             </div>
           </div>
         </div>
       </div>
+
+      {loginModal && <LoginModal setLoginModal={setLoginModal}></LoginModal>}
     </div>
   );
 };

@@ -1,15 +1,13 @@
 import toast from "react-hot-toast";
-import { projectEndpoints } from "../apiURL";
+import { timeLineEndpoints } from "../apiURL";
 import { apiConnector } from "../apiconnector";
 
-const { ADD_PROJECT, GET_ALL_PROJECTS } = projectEndpoints;
+const { ADD_TIMELINE, GET_ALL_TIMELINES } = timeLineEndpoints;
 
-export async function addProject(data) {
+export async function addTimeLine(data) {
   const toastId = toast.loading("Loading...");
   try {
-    const response = await apiConnector("POST", ADD_PROJECT, data, {
-      "Content-Type": "multipart/form-data",
-    });
+    const response = await apiConnector("POST", ADD_TIMELINE, data);
 
     if (!response.data.success) {
       throw new Error(response.data.message);
@@ -18,24 +16,25 @@ export async function addProject(data) {
     toast.success(response.data.message);
   } catch (error) {
     console.log(error);
-    toast.error("Failed To Upload New Project");
+    toast.error("Failed To Upload New Time Line");
   } finally {
     toast.dismiss(toastId);
   }
 }
 
-export async function getAllProjects() {
+export async function fetchAllTimeLines() {
   let result = [];
   try {
-    const response = await apiConnector("GET", GET_ALL_PROJECTS);
+    const response = await apiConnector("GET", GET_ALL_TIMELINES);
 
     if (!response.data.success) {
       throw new Error(response.data.message);
     }
 
-    result = response.data?.projects;
+    result = response.data?.timeLines;
   } catch (error) {
     console.log(error);
   }
+
   return result;
 }

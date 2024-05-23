@@ -107,57 +107,6 @@ const technologies = [
   },
 ];
 
-const experiences = [
-  {
-    title: "Frontend Development and Java Language",
-    // company_name: "Starbucks",
-    icon: tailwind,
-    iconBg: "#383E56",
-    date: "December 2022 - July 2023",
-    points: [
-      "Developing and maintaining web applications using HTML, Vanila CSS, Tailwind CSS.",
-      "Learning basics of Java Programing Language",
-    ],
-  },
-  {
-    title: "React Js Development and DSA",
-    // company_name: "Tesla",
-    icon: reactjs,
-    iconBg: "#E6DEDD",
-    date: "August 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Understanding different Data Structurs and Algorithm and solving problem on different platform like Leetcode, code studio using DSA concepts",
-    ],
-  },
-  // {
-  //     title: "Web Developer",
-  //     company_name: "Shopify",
-  //     icon: shopify,
-  //     iconBg: "#383E56",
-  //     date: "Jan 2022 - Jan 2023",
-  //     points: [
-  //         "Developing and maintaining web applications using React.js and other related technologies.",
-  //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //         "Implementing responsive design and ensuring cross-browser compatibility.",
-  //         "Participating in code reviews and providing constructive feedback to other developers.",
-  //     ],
-  // },
-  // {
-  //     title: "Full stack Developer",
-  //     company_name: "Meta",
-  //     icon: meta,
-  //     iconBg: "#E6DEDD",
-  //     date: "Jan 2023 - Present",
-  //     points: [
-  //         "Developing and maintaining web applications using React.js and other related technologies.",
-  //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //         "Implementing responsive design and ensuring cross-browser compatibility.",
-  //         "Participating in code reviews and providing constructive feedback to other developers.",
-  //     ],
-  // },
-];
-
 const testimonials = [
   {
     testimonial:
@@ -185,4 +134,4 @@ const testimonials = [
   },
 ];
 
-export { services, technologies, experiences, testimonials };
+export { services, technologies, testimonials };

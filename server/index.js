@@ -9,6 +9,7 @@ const { cloudinaryConnect } = require("./configs/cloudinary");
 
 const authRoutes = require("./routes/Auth");
 const projectRoutes = require("./routes/Project");
+const timmeLineRoutes = require("./routes/TimeLine");
 
 const PORT = process.env.PORT || 5000;
 
@@ -33,6 +34,7 @@ cloudinaryConnect();
 // Mount Routes
 app.use("/portfolio-api/v1/auth", authRoutes);
 app.use("/portfolio-api/v1/project", projectRoutes);
+app.use("/portfolio-api/v1/timeLine", timmeLineRoutes);
 
 app.get("/", (req, res) => {
   return res.json({
